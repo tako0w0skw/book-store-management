@@ -1,0 +1,11 @@
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\bin\Debug\BUS.dll
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\bin\Debug\BUS.pdb
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\bin\Debug\DAO.dll
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\bin\Debug\DTO.dll
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\bin\Debug\DAO.pdb
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\bin\Debug\DTO.pdb
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\obj\Debug\BUS.csproj.Up2Date
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\obj\Debug\BUS.dll
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\BUS\obj\Debug\BUS.pdb
