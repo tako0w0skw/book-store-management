@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="KhuyenMaiBUS.cs" />
     <Compile Include="SachBUS.cs" />
+    <Compile Include="TacGiaBUS.cs" />
+    <Compile Include="TacGiaSachBUS.cs" />
     <Compile Include="UsersManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
