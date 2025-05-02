@@ -29,59 +29,58 @@
         private void InitializeComponent()
         {
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
-            this.elipseControl1 = new GUI.ElipseControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaSach = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.pbSach = new FontAwesome.Sharp.IconPictureBox();
+            this.btnUploadImage = new FontAwesome.Sharp.IconButton();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.cbTrangThai = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.cbMaKM = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtDichGia = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.dtpNgPhatHanh = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSoTrang = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtSLT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTenSach = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.cbNXB = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGia = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSach = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnSua = new FontAwesome.Sharp.IconButton();
+            this.btnXoa = new FontAwesome.Sharp.IconButton();
+            this.btnThem = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSach)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -95,7 +94,7 @@
             this.panel5.SuspendLayout();
             this.panel14.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -113,11 +112,6 @@
             this.bigLabel1.Size = new System.Drawing.Size(279, 48);
             this.bigLabel1.TabIndex = 1;
             this.bigLabel1.Text = "QUẢN LÝ SÁCH";
-            // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 50;
-            this.elipseControl1.TargetControl = null;
             // 
             // panel1
             // 
@@ -139,20 +133,21 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Mã sách:";
             // 
-            // textBox1
+            // txtMaSach
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(244, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 39);
-            this.textBox1.TabIndex = 25;
+            this.txtMaSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSach.Location = new System.Drawing.Point(244, 9);
+            this.txtMaSach.Name = "txtMaSach";
+            this.txtMaSach.ReadOnly = true;
+            this.txtMaSach.Size = new System.Drawing.Size(244, 37);
+            this.txtMaSach.TabIndex = 25;
             // 
             // groupBox2
             // 
             this.groupBox2.AutoSize = true;
-            this.groupBox2.Controls.Add(this.iconPictureBox1);
-            this.groupBox2.Controls.Add(this.iconButton5);
+            this.groupBox2.Controls.Add(this.pbSach);
+            this.groupBox2.Controls.Add(this.btnUploadImage);
             this.groupBox2.Controls.Add(this.panel13);
             this.groupBox2.Controls.Add(this.panel12);
             this.groupBox2.Controls.Add(this.panel11);
@@ -172,56 +167,70 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin sách";
             // 
-            // iconPictureBox1
+            // pbSach
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Book;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 120;
-            this.iconPictureBox1.Location = new System.Drawing.Point(212, 35);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPictureBox1.TabIndex = 38;
-            this.iconPictureBox1.TabStop = false;
+            this.pbSach.BackColor = System.Drawing.Color.Transparent;
+            this.pbSach.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.pbSach.IconChar = FontAwesome.Sharp.IconChar.Image;
+            this.pbSach.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.pbSach.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pbSach.IconSize = 120;
+            this.pbSach.Location = new System.Drawing.Point(212, 35);
+            this.pbSach.Margin = new System.Windows.Forms.Padding(0);
+            this.pbSach.Name = "pbSach";
+            this.pbSach.Size = new System.Drawing.Size(120, 120);
+            this.pbSach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSach.TabIndex = 38;
+            this.pbSach.TabStop = false;
             // 
-            // iconButton5
+            // btnUploadImage
             // 
-            this.iconButton5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.AliceBlue;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.iconButton5.IconColor = System.Drawing.Color.AliceBlue;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 30;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(180, 166);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.iconButton5.Size = new System.Drawing.Size(185, 41);
-            this.iconButton5.TabIndex = 37;
-            this.iconButton5.Text = "Upload";
-            this.iconButton5.UseVisualStyleBackColor = false;
+            this.btnUploadImage.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnUploadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.btnUploadImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUploadImage.FlatAppearance.BorderSize = 0;
+            this.btnUploadImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnUploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUploadImage.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnUploadImage.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.btnUploadImage.IconColor = System.Drawing.Color.AliceBlue;
+            this.btnUploadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUploadImage.IconSize = 30;
+            this.btnUploadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUploadImage.Location = new System.Drawing.Point(180, 166);
+            this.btnUploadImage.Margin = new System.Windows.Forms.Padding(0);
+            this.btnUploadImage.Name = "btnUploadImage";
+            this.btnUploadImage.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnUploadImage.Size = new System.Drawing.Size(185, 41);
+            this.btnUploadImage.TabIndex = 37;
+            this.btnUploadImage.Text = "Upload";
+            this.btnUploadImage.UseVisualStyleBackColor = false;
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
             // 
             // panel13
             // 
             this.panel13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel13.Controls.Add(this.comboBox3);
+            this.panel13.Controls.Add(this.cbTrangThai);
             this.panel13.Controls.Add(this.label11);
             this.panel13.Location = new System.Drawing.Point(17, 739);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(507, 52);
             this.panel13.TabIndex = 26;
+            // 
+            // cbTrangThai
+            // 
+            this.cbTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTrangThai.FormattingEnabled = true;
+            this.cbTrangThai.Items.AddRange(new object[] {
+            "Còn hàng",
+            "Hết hàng",
+            "Ngưng bán"});
+            this.cbTrangThai.Location = new System.Drawing.Point(244, 11);
+            this.cbTrangThai.Name = "cbTrangThai";
+            this.cbTrangThai.Size = new System.Drawing.Size(244, 38);
+            this.cbTrangThai.TabIndex = 16;
             // 
             // label11
             // 
@@ -236,12 +245,21 @@
             // panel12
             // 
             this.panel12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel12.Controls.Add(this.comboBox2);
+            this.panel12.Controls.Add(this.cbMaKM);
             this.panel12.Controls.Add(this.label10);
             this.panel12.Location = new System.Drawing.Point(17, 687);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(507, 52);
             this.panel12.TabIndex = 26;
+            // 
+            // cbMaKM
+            // 
+            this.cbMaKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaKM.FormattingEnabled = true;
+            this.cbMaKM.Location = new System.Drawing.Point(244, 9);
+            this.cbMaKM.Name = "cbMaKM";
+            this.cbMaKM.Size = new System.Drawing.Size(244, 38);
+            this.cbMaKM.TabIndex = 16;
             // 
             // label10
             // 
@@ -256,21 +274,21 @@
             // panel11
             // 
             this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel11.Controls.Add(this.textBox8);
+            this.panel11.Controls.Add(this.txtDichGia);
             this.panel11.Controls.Add(this.label9);
             this.panel11.Location = new System.Drawing.Point(17, 635);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(507, 52);
             this.panel11.TabIndex = 26;
             // 
-            // textBox8
+            // txtDichGia
             // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(244, 9);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(244, 39);
-            this.textBox8.TabIndex = 25;
+            this.txtDichGia.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDichGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDichGia.Location = new System.Drawing.Point(244, 9);
+            this.txtDichGia.Name = "txtDichGia";
+            this.txtDichGia.Size = new System.Drawing.Size(244, 37);
+            this.txtDichGia.TabIndex = 25;
             // 
             // label9
             // 
@@ -285,12 +303,20 @@
             // panel10
             // 
             this.panel10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel10.Controls.Add(this.dateTimePicker1);
+            this.panel10.Controls.Add(this.dtpNgPhatHanh);
             this.panel10.Controls.Add(this.label8);
             this.panel10.Location = new System.Drawing.Point(17, 583);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(507, 52);
             this.panel10.TabIndex = 26;
+            // 
+            // dtpNgPhatHanh
+            // 
+            this.dtpNgPhatHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgPhatHanh.Location = new System.Drawing.Point(244, 9);
+            this.dtpNgPhatHanh.Name = "dtpNgPhatHanh";
+            this.dtpNgPhatHanh.Size = new System.Drawing.Size(244, 37);
+            this.dtpNgPhatHanh.TabIndex = 16;
             // 
             // label8
             // 
@@ -305,21 +331,21 @@
             // panel9
             // 
             this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel9.Controls.Add(this.textBox6);
+            this.panel9.Controls.Add(this.txtSoTrang);
             this.panel9.Controls.Add(this.label7);
             this.panel9.Location = new System.Drawing.Point(17, 531);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(507, 52);
             this.panel9.TabIndex = 26;
             // 
-            // textBox6
+            // txtSoTrang
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(244, 9);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(244, 39);
-            this.textBox6.TabIndex = 25;
+            this.txtSoTrang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSoTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTrang.Location = new System.Drawing.Point(244, 9);
+            this.txtSoTrang.Name = "txtSoTrang";
+            this.txtSoTrang.Size = new System.Drawing.Size(244, 37);
+            this.txtSoTrang.TabIndex = 25;
             // 
             // label7
             // 
@@ -334,23 +360,23 @@
             // panel8
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel8.Controls.Add(this.textBox4);
+            this.panel8.Controls.Add(this.txtMoTa);
             this.panel8.Controls.Add(this.label4);
             this.panel8.Location = new System.Drawing.Point(17, 479);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(507, 52);
             this.panel8.TabIndex = 26;
             // 
-            // textBox4
+            // txtMoTa
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(244, 9);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(244, 38);
-            this.textBox4.TabIndex = 25;
+            this.txtMoTa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMoTa.Location = new System.Drawing.Point(244, 9);
+            this.txtMoTa.Multiline = true;
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtMoTa.Size = new System.Drawing.Size(244, 38);
+            this.txtMoTa.TabIndex = 25;
             // 
             // label4
             // 
@@ -365,21 +391,21 @@
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel6.Controls.Add(this.textBox11);
+            this.panel6.Controls.Add(this.txtSLT);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Location = new System.Drawing.Point(17, 375);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(507, 52);
             this.panel6.TabIndex = 1;
             // 
-            // textBox11
+            // txtSLT
             // 
-            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(244, 9);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(244, 39);
-            this.textBox11.TabIndex = 26;
+            this.txtSLT.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSLT.Location = new System.Drawing.Point(244, 9);
+            this.txtSLT.Name = "txtSLT";
+            this.txtSLT.Size = new System.Drawing.Size(244, 37);
+            this.txtSLT.TabIndex = 26;
             // 
             // label1
             // 
@@ -394,7 +420,7 @@
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtMaSach);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(17, 219);
             this.panel3.Name = "panel3";
@@ -404,21 +430,21 @@
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Controls.Add(this.txtTenSach);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Location = new System.Drawing.Point(17, 271);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(507, 52);
             this.panel4.TabIndex = 1;
             // 
-            // textBox5
+            // txtTenSach
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(244, 9);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(244, 39);
-            this.textBox5.TabIndex = 25;
+            this.txtTenSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSach.Location = new System.Drawing.Point(244, 9);
+            this.txtTenSach.Name = "txtTenSach";
+            this.txtTenSach.Size = new System.Drawing.Size(244, 37);
+            this.txtTenSach.TabIndex = 25;
             // 
             // label5
             // 
@@ -433,12 +459,29 @@
             // panel7
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel7.Controls.Add(this.comboBox1);
+            this.panel7.Controls.Add(this.cbNXB);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Location = new System.Drawing.Point(17, 427);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(507, 52);
             this.panel7.TabIndex = 1;
+            // 
+            // cbNXB
+            // 
+            this.cbNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNXB.FormattingEnabled = true;
+            this.cbNXB.Items.AddRange(new object[] {
+            "NXB Nhã Nam",
+            "NXB Kim Đồng",
+            "NXB Thế Giới",
+            "NXB Trẻ",
+            "NXB Lao Động",
+            "NXB Thanh Niên",
+            "NXB Văn Hóa"});
+            this.cbNXB.Location = new System.Drawing.Point(244, 9);
+            this.cbNXB.Name = "cbNXB";
+            this.cbNXB.Size = new System.Drawing.Size(244, 38);
+            this.cbNXB.TabIndex = 16;
             // 
             // label3
             // 
@@ -453,21 +496,21 @@
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.txtGia);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Location = new System.Drawing.Point(17, 323);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(507, 52);
             this.panel5.TabIndex = 1;
             // 
-            // textBox2
+            // txtGia
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(244, 8);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 39);
-            this.textBox2.TabIndex = 25;
+            this.txtGia.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGia.Location = new System.Drawing.Point(244, 8);
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Size = new System.Drawing.Size(244, 37);
+            this.txtGia.TabIndex = 25;
             // 
             // label6
             // 
@@ -495,7 +538,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvSach);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(599, 271);
             this.groupBox1.Name = "groupBox1";
@@ -504,19 +547,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách sách";
             // 
-            // dataGridView1
+            // dgvSach
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvSach.AllowUserToAddRows = false;
+            this.dgvSach.AllowUserToDeleteRows = false;
+            this.dgvSach.AllowUserToOrderColumns = true;
+            this.dgvSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 505);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvSach.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSach.Location = new System.Drawing.Point(25, 38);
+            this.dgvSach.MultiSelect = false;
+            this.dgvSach.Name = "dgvSach";
+            this.dgvSach.ReadOnly = true;
+            this.dgvSach.RowHeadersWidth = 62;
+            this.dgvSach.RowTemplate.Height = 28;
+            this.dgvSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSach.Size = new System.Drawing.Size(618, 492);
+            this.dgvSach.TabIndex = 0;
+            this.dgvSach.SelectionChanged += new System.EventHandler(this.dgvSach_SelectionChanged);
             // 
             // groupBox3
             // 
@@ -582,113 +632,73 @@
             // 
             this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel15.Controls.Add(this.iconButton3);
-            this.panel15.Controls.Add(this.iconButton2);
-            this.panel15.Controls.Add(this.iconButton1);
+            this.panel15.Controls.Add(this.btnSua);
+            this.panel15.Controls.Add(this.btnXoa);
+            this.panel15.Controls.Add(this.btnThem);
             this.panel15.Location = new System.Drawing.Point(82, 34);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(523, 61);
             this.panel15.TabIndex = 28;
             // 
-            // iconButton3
+            // btnSua
             // 
-            this.iconButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            this.iconButton3.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(373, 6);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(138, 50);
-            this.iconButton3.TabIndex = 36;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.btnSua.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnSua.IconSize = 30;
+            this.btnSua.Location = new System.Drawing.Point(373, 6);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(138, 50);
+            this.btnSua.TabIndex = 36;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // iconButton2
+            // btnXoa
             // 
-            this.iconButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.iconButton2.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton2.IconSize = 30;
-            this.iconButton2.Location = new System.Drawing.Point(195, 6);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(138, 50);
-            this.iconButton2.TabIndex = 36;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnXoa.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnXoa.IconSize = 30;
+            this.btnXoa.Location = new System.Drawing.Point(195, 6);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(0);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(138, 50);
+            this.btnXoa.TabIndex = 36;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // iconButton1
+            // btnThem
             // 
-            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButton1.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(11, 6);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(138, 50);
-            this.iconButton1.TabIndex = 36;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "NXB Nhã Nam",
-            "NXB Kim Đồng",
-            "NXB Thế Giới",
-            "NXB Trẻ",
-            "NXB Lao Động",
-            "NXB Thanh Niên",
-            "NXB Văn Hóa"});
-            this.comboBox1.Location = new System.Drawing.Point(244, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(244, 38);
-            this.comboBox1.TabIndex = 16;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(244, 9);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(244, 37);
-            this.dateTimePicker1.TabIndex = 16;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(244, 9);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(244, 38);
-            this.comboBox2.TabIndex = 16;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Còn hàng",
-            "Hết hàng",
-            "Ngưng bán"});
-            this.comboBox3.Location = new System.Drawing.Point(244, 11);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(244, 38);
-            this.comboBox3.TabIndex = 16;
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnThem.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnThem.IconSize = 30;
+            this.btnThem.Location = new System.Drawing.Point(11, 6);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(0);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(138, 50);
+            this.btnThem.TabIndex = 36;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // QL_Sach
             // 
@@ -703,10 +713,11 @@
             this.Name = "QL_Sach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "QLHoaDon";
+            this.Load += new System.EventHandler(this.QL_Sach_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSach)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -732,7 +743,7 @@
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -747,10 +758,9 @@
         #endregion
 
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
-        private ElipseControl elipseControl1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaSach;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
@@ -758,44 +768,44 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTenSach;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtDichGia;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtSoTrang;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.TextBox textBox11;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.TextBox txtSLT;
+        private FontAwesome.Sharp.IconButton btnUploadImage;
+        private FontAwesome.Sharp.IconPictureBox pbSach;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSach;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Panel panel15;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private FontAwesome.Sharp.IconButton btnSua;
+        private FontAwesome.Sharp.IconButton btnXoa;
+        private FontAwesome.Sharp.IconButton btnThem;
+        private System.Windows.Forms.ComboBox cbNXB;
+        private System.Windows.Forms.ComboBox cbMaKM;
+        private System.Windows.Forms.DateTimePicker dtpNgPhatHanh;
+        private System.Windows.Forms.ComboBox cbTrangThai;
     }
 }

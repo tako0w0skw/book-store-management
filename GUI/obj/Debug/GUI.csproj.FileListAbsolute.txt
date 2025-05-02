@@ -59,3 +59,5 @@ D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\GUI\bin\Debug\FontAwesome.Sharp
 D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\GUI\obj\Debug\GUI.frm_Manager.QL_Sach.resources
 D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\GUI\obj\Debug\GUI.frm_Manager.QL_NhanVien.resources
 D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\GUI\obj\Debug\GUI.frm_Manager.QL_DchiKH.resources
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\GUI\bin\Debug\DAO.dll
+D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\GUI\bin\Debug\DAO.pdb

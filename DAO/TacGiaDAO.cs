@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO
+namespace DAO
 {
-    public class Class1
+    internal class TacGiaDAO
     {
     }
 }
