@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class TacGiaSachDTO
+    public class TacGiaSachDTO
     {
+        public int MaSach { get; set; }
+        public int MaTacGia { get; set; }
+        public string TenSach { get; set; }
+        public string TenTacGia { get; set; }
     }
 }

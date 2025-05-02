@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class TacGiaDTO
+    internal class TheLoaiSachDTO
     {
-        public int MaTacGia { get; set; }
-        public string TenTacGia { get; set; }
-
     }
 }
