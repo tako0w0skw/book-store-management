@@ -7,3 +7,12 @@ D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\DAO\obj\Debug\DAO.csproj.CoreCo
 D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\DAO\obj\Debug\DAO.csproj.Up2Date
 D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\DAO\obj\Debug\DAO.dll
 D:\LT_Windows\BaoCaoDoAn\PM_QuanLyCuaHangBanSach\DAO\obj\Debug\DAO.pdb
+D:\LT_Windows\BaoCaoDoAn\book-store-management\DAO\bin\Debug\DAO.dll
+D:\LT_Windows\BaoCaoDoAn\book-store-management\DAO\bin\Debug\DAO.pdb
+D:\LT_Windows\BaoCaoDoAn\book-store-management\DAO\bin\Debug\DTO.dll
+D:\LT_Windows\BaoCaoDoAn\book-store-management\DAO\bin\Debug\DTO.pdb
+D:\LT_Windows\BaoCaoDoAn\book-store-management\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\LT_Windows\BaoCaoDoAn\book-store-management\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\LT_Windows\BaoCaoDoAn\book-store-management\DAO\obj\Debug\DAO.csproj.Up2Date
+D:\LT_Windows\BaoCaoDoAn\book-store-management\DAO\obj\Debug\DAO.dll
+D:\LT_Windows\BaoCaoDoAn\book-store-management\DAO\obj\Debug\DAO.pdb

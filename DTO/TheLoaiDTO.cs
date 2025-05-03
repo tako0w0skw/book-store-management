@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class TheLoaiSachDTO
+    public class TheLoaiDTO
     {
-        public int MaSach { get; set; }
         public int MaTheLoai { get; set; }
-        public string TenSach { get; set; }
         public string TenTheLoai { get; set; }
+
     }
 }
