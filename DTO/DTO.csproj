@@ -46,6 +46,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TacGiaDTO.cs" />
     <Compile Include="TacGiaSachDTO.cs" />
+    <Compile Include="TheLoaiDTO.cs" />
+    <Compile Include="TheLoaiSachDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

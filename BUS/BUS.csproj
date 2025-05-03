@@ -45,6 +45,8 @@
     <Compile Include="SachBUS.cs" />
     <Compile Include="TacGiaBUS.cs" />
     <Compile Include="TacGiaSachBUS.cs" />
+    <Compile Include="TheLoaiBUS.cs" />
+    <Compile Include="TheLoaiSachBUS.cs" />
     <Compile Include="UsersManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

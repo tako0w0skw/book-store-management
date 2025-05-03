@@ -47,6 +47,8 @@
     <Compile Include="SachDAO.cs" />
     <Compile Include="TacGiaDAO.cs" />
     <Compile Include="TacGiaSachDAO.cs" />
+    <Compile Include="TheLoaiDAO.cs" />
+    <Compile Include="TheLoaiSachDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
