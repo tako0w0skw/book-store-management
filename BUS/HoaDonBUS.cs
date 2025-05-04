@@ -10,6 +10,12 @@ namespace BUS
 {
     public class HoaDonBUS
     {
+        public List<HoaDonDTO> LayDanhSachHoaDon(int maHD = -1, int maNV = -1, int maKH = -1)
+        {
+            HoaDonDAO hoaDonDAO = new HoaDonDAO();
+            return hoaDonDAO.LayDanhSachHoaDon(maHD, maNV, maKH);
+        }
+
         public int ThemHoaDon(HoaDonDTO hoaDon)
         {
             HoaDonDAO hoaDonDAO = new HoaDonDAO();

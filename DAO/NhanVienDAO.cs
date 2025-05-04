@@ -39,12 +39,29 @@ namespace DAO
                 nhanVien.MaNV = int.Parse(dr["MaNV"].ToString());
                 nhanVien.HoTen = dr["HoTen"].ToString();
                 nhanVien.GioiTinh = dr["GioiTinh"].ToString();
-                nhanVien.NgaySinh = DateTime.Parse(dr["NgaySinh"].ToString());
+
+                if (DateTime.TryParse(dr["NgaySinh"].ToString(), out DateTime ngaySinh))
+                {
+                    nhanVien.NgaySinh = ngaySinh;
+                }
+                else
+                {
+                    nhanVien.NgaySinh = DateTime.MinValue; // Or handle as needed
+                }
+
                 nhanVien.Email = dr["Email"].ToString();
                 nhanVien.SDT = dr["SDT"].ToString();
                 nhanVien.DiaChi = dr["DiaChi"].ToString();
                 nhanVien.ChucVu = dr["ChucVu"].ToString();
-                nhanVien.NgayVaoLam = DateTime.Parse(dr["NgayVaoLam"].ToString());
+                if (DateTime.TryParse(dr["NgayVaoLam"].ToString(), out DateTime ngayVaoLam))
+                {
+                    nhanVien.NgayVaoLam = ngayVaoLam;
+                }
+                else
+                {
+                    nhanVien.NgayVaoLam = DateTime.MinValue; // Or handle as needed
+                }
+
                 nhanVien.Username = dr["Username"].ToString();
                 nhanVien.Password_NV = dr["Password_NV"].ToString();
                 nhanVien.TrangThai = dr["TrangThai"].ToString();

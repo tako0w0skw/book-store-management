@@ -160,6 +160,12 @@
     <Compile Include="ElipseControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="frm_Manager\frm_CTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Manager\frm_CTHD.Designer.cs">
+      <DependentUpon>frm_CTHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Manager\QL_DchiKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Manager\frm_CTHD.resx">
+      <DependentUpon>frm_CTHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Manager\QL_DchiKH.resx">
       <DependentUpon>QL_DchiKH.cs</DependentUpon>

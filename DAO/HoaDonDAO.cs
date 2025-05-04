@@ -45,7 +45,9 @@ namespace DAO
                 hoaDon.SDT = dr["SDT"].ToString();
                 hoaDon.TrangThai = dr["TrangThai"].ToString();
                 hoaDon.MaKH = int.Parse(dr["MaKH"].ToString());
-                hoaDon.MaNV = int.Parse(dr["MaNV"].ToString());
+                hoaDon.MaKM = dr["MaKM"].ToString();
+                hoaDon.MaNV = dr["MaNV"] != DBNull.Value && !string.IsNullOrEmpty(dr["MaNV"].ToString())? int.Parse(dr["MaNV"].ToString()): 0; // Or a default value
+
                 dsHoaDon.Add(hoaDon);
             }
             dr.Close();
