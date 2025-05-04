@@ -136,6 +136,7 @@
             // txtMaSach
             // 
             this.txtMaSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMaSach.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.txtMaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSach.Location = new System.Drawing.Point(244, 9);
             this.txtMaSach.Name = "txtMaSach";

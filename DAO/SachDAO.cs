@@ -118,5 +118,19 @@ namespace DAO
             conn.Close();
             return kq;
         }
+
+        public int CapNhatSoLuongTon(int maSach, int soLuong)
+        {
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@MaSach", maSach));
+            paramList.Add(new SqlParameter("@SoLuong", soLuong));
+            SqlParameter[] parameters = paramList.ToArray();
+            string proc = "sp_CapNhatSoLuongTon";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            conn.Close();
+            return kq;
+        }
     }
 }

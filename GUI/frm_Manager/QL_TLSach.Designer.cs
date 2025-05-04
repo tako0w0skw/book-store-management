@@ -94,8 +94,10 @@
             this.dgvTLS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTLS.Location = new System.Drawing.Point(25, 44);
             this.dgvTLS.Name = "dgvTLS";
+            this.dgvTLS.ReadOnly = true;
             this.dgvTLS.RowHeadersWidth = 62;
             this.dgvTLS.RowTemplate.Height = 28;
+            this.dgvTLS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTLS.Size = new System.Drawing.Size(618, 458);
             this.dgvTLS.TabIndex = 0;
             this.dgvTLS.SelectionChanged += new System.EventHandler(this.dgvTLS_SelectionChanged);

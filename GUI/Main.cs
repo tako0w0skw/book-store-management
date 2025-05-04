@@ -7,12 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 using GUI.frm_Manager;
 
 namespace GUI
 {
     public partial class Main : Form
     {
+        public static NhanVienDTO user;
+
+        public Main(NhanVienDTO nhanVien)
+        {
+            InitializeComponent();
+            Main.user = nhanVien;
+        }
         public Main()
         {
             InitializeComponent();
@@ -70,36 +78,7 @@ namespace GUI
         {
             btnQLS_timer.Start();
         }
-        QLHoaDon qlhd;
-        private void btnDonHang_Click(object sender, EventArgs e)
-        {
-            if (qlhd == null)
-            {
-                qlhd = new QLHoaDon();
-                qlhd.MdiParent = this;
-                qlhd.Dock = DockStyle.Fill;
-                qlhd.Show();
-            }
-            else
-            {
-                qlhd.Activate();
-            }
-        }
-        QL_CTHD qlcthd;
-        private void btnCTDH_Click(object sender, EventArgs e)
-        {
-            if (qlcthd == null)
-            {
-                qlcthd = new QL_CTHD();
-                qlcthd.MdiParent = this;
-                qlcthd.Dock = DockStyle.Fill;
-                qlcthd.Show();
-            }
-            else
-            {
-                qlcthd.Activate();
-            }
-        }
+        
         QL_TGSach qltgsach;
         private void btnTGSach_Click(object sender, EventArgs e)
         {
@@ -214,6 +193,7 @@ namespace GUI
                     pnQLTL.Width = sideBar.Width;
                     pnQLNV.Width = sideBar.Width;
                     pnQLDchiKH.Width = sideBar.Width;
+                    pnTTTK.Width = sideBar.Width;
                 }
             }
             else
@@ -232,6 +212,7 @@ namespace GUI
                     pnQLTL.Width = sideBar.Width;
                     pnQLNV.Width = sideBar.Width;
                     pnQLDchiKH.Width = sideBar.Width;
+                    pnTTTK.Width = sideBar.Width;
                 }
             }
         }
@@ -279,6 +260,59 @@ namespace GUI
             {
                 qldchi.Activate();
             }
+        }
+        QL_CTHD qlcthd;
+        private void btnLapHD_Click(object sender, EventArgs e)
+        {
+            if(qlcthd == null)
+            {
+                qlcthd = new QL_CTHD();
+                qlcthd.MdiParent = this;
+                qlcthd.Dock = DockStyle.Fill;
+                qlcthd.Show();
+            }
+            else
+            {
+                qlcthd.Activate();
+            }
+        }
+        QLHoaDon qlhd;
+        private void btnDSHD_Click(object sender, EventArgs e)
+        {
+            if (qlhd == null)
+            {
+                qlhd = new QLHoaDon();
+                qlhd.MdiParent = this;
+                qlhd.Dock = DockStyle.Fill;
+                qlhd.Show();
+            }
+            else
+            {
+                qlhd.Activate();
+            }
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dr == DialogResult.Yes)
+            {
+                this.Hide();
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.ShowDialog();
+                this.Close();
+            }    
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            lblUserName.Text = user.HoTen;
+            lblRole.Text = user.ChucVu;
+            if (user.ChucVu == "Nhân viên")
+            {
+                btnQLNV.Visible = false;
+                pnQLNV.Visible = false;
+            }    
         }
     }
 }

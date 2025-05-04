@@ -33,5 +33,11 @@ namespace BUS
             SachDAO sachDAO = new SachDAO();
             return sachDAO.CapNhatSach(sach);
         }
+
+        public int CapNhatSoLuongTon(int maSach, int soLuong)
+        {
+            SachDAO sachDAO = new SachDAO();
+            return sachDAO.CapNhatSoLuongTon(maSach, soLuong);
+        }
     }
 }

@@ -34,8 +34,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbTenTacGia = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbTenSach = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -47,8 +49,6 @@
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.cbTenSach = new System.Windows.Forms.ComboBox();
-            this.cbTenTacGia = new System.Windows.Forms.ComboBox();
             this.elipseControl1 = new GUI.ElipseControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTGS)).BeginInit();
@@ -94,8 +94,10 @@
             this.dgvTGS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTGS.Location = new System.Drawing.Point(25, 43);
             this.dgvTGS.Name = "dgvTGS";
+            this.dgvTGS.ReadOnly = true;
             this.dgvTGS.RowHeadersWidth = 62;
             this.dgvTGS.RowTemplate.Height = 28;
+            this.dgvTGS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTGS.Size = new System.Drawing.Size(618, 457);
             this.dgvTGS.TabIndex = 0;
             this.dgvTGS.SelectionChanged += new System.EventHandler(this.dgvTGS_SelectionChanged);
@@ -137,6 +139,14 @@
             this.panel3.Size = new System.Drawing.Size(507, 52);
             this.panel3.TabIndex = 2;
             // 
+            // cbTenTacGia
+            // 
+            this.cbTenTacGia.FormattingEnabled = true;
+            this.cbTenTacGia.Location = new System.Drawing.Point(182, 10);
+            this.cbTenTacGia.Name = "cbTenTacGia";
+            this.cbTenTacGia.Size = new System.Drawing.Size(306, 38);
+            this.cbTenTacGia.TabIndex = 26;
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -156,6 +166,14 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(507, 52);
             this.panel4.TabIndex = 3;
+            // 
+            // cbTenSach
+            // 
+            this.cbTenSach.FormattingEnabled = true;
+            this.cbTenSach.Location = new System.Drawing.Point(182, 11);
+            this.cbTenSach.Name = "cbTenSach";
+            this.cbTenSach.Size = new System.Drawing.Size(306, 38);
+            this.cbTenSach.TabIndex = 26;
             // 
             // label5
             // 
@@ -304,22 +322,6 @@
             this.btnThem.TabIndex = 36;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // cbTenSach
-            // 
-            this.cbTenSach.FormattingEnabled = true;
-            this.cbTenSach.Location = new System.Drawing.Point(182, 11);
-            this.cbTenSach.Name = "cbTenSach";
-            this.cbTenSach.Size = new System.Drawing.Size(306, 38);
-            this.cbTenSach.TabIndex = 26;
-            // 
-            // cbTenTacGia
-            // 
-            this.cbTenTacGia.FormattingEnabled = true;
-            this.cbTenTacGia.Location = new System.Drawing.Point(182, 10);
-            this.cbTenTacGia.Name = "cbTenTacGia";
-            this.cbTenTacGia.Size = new System.Drawing.Size(306, 38);
-            this.cbTenTacGia.TabIndex = 26;
             // 
             // elipseControl1
             // 

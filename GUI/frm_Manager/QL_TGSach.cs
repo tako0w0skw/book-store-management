@@ -39,6 +39,7 @@ namespace GUI
             dsTacGiaSach = tacGiaSachBUS.LayDanhSachTacGiaSach();
             dgvTGS.DataSource = dsTacGiaSach;
             dgvTGS.Columns["MaSach"].HeaderText = "Mã Sách";
+            dgvTGS.Columns["MaTacGia"].HeaderText = "Mã Tác Giả";
             dgvTGS.Columns["TenSach"].HeaderText = "Tên Sách";
             dgvTGS.Columns["TenTacGia"].HeaderText = "Tên Tác Giả";
             dgvTGS.AutoGenerateColumns = false; // không tự động sinh cột

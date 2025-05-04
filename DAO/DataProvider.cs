@@ -82,5 +82,23 @@ namespace DAO
                 throw new Exception("Lỗi thực thi thủ tục: " + ex.Message);
             }
         }
+
+        public static int ExcuteProcedureScalar(string procedureName, SqlConnection strKetNoi, SqlParameter[] parameters)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(procedureName, strKetNoi);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi thực thi thủ tục: " + ex.Message);
+            }
+        }
     }
 }

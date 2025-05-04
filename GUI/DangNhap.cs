@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using DTO;
 
 namespace GUI
 {
@@ -30,10 +31,11 @@ namespace GUI
                 string username = txtTK.Text.Trim(); // nguyen van a -> nguyenvana
                 string password = txtMK.Text;
 
-                if (UsersManager.KiemtraDangnhap(username, password))
+                if (UsersManager.KiemTraDangNhap(username, password))
                 {
+                    NhanVienDTO nhanVien = UsersManager.LayThongTinUser(username, password);
                     this.Hide();
-                    Main main = new Main();
+                    Main main = new Main(nhanVien);
                     main.ShowDialog();
                     this.Close(); // đóng luôn khi main đóng
 
