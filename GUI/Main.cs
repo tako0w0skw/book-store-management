@@ -124,12 +124,12 @@ namespace GUI
                 qlkh.Activate();
             }    
         }
-        QL_KhuyenMai qlkm;
+        QLKM qlkm;
         private void btnQLKM_Click(object sender, EventArgs e)
         {
             if(qlkm == null)
             {
-                qlkm = new QL_KhuyenMai();
+                qlkm = new QLKM();
                 qlkm.MdiParent = this;
                 qlkm.Dock = DockStyle.Fill;
                 qlkm.Show();
@@ -193,7 +193,6 @@ namespace GUI
                     pnQLTL.Width = sideBar.Width;
                     pnQLNV.Width = sideBar.Width;
                     pnQLDchiKH.Width = sideBar.Width;
-                    pnTTTK.Width = sideBar.Width;
                 }
             }
             else
@@ -212,7 +211,6 @@ namespace GUI
                     pnQLTL.Width = sideBar.Width;
                     pnQLNV.Width = sideBar.Width;
                     pnQLDchiKH.Width = sideBar.Width;
-                    pnTTTK.Width = sideBar.Width;
                 }
             }
         }

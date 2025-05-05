@@ -63,12 +63,10 @@
             this.btnQLS_timer = new System.Windows.Forms.Timer(this.components);
             this.btnSideBar_timer = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.lblRole = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pnTTTK = new System.Windows.Forms.Panel();
-            this.btnTTTK = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideBar)).BeginInit();
             this.sideBar.SuspendLayout();
@@ -82,7 +80,6 @@
             this.pnQLNV.SuspendLayout();
             this.pnDangXuat.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.pnTTTK.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -161,7 +158,6 @@
             // sideBar
             // 
             this.sideBar.AutoScroll = true;
-            this.sideBar.AutoSize = true;
             this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
             this.sideBar.Controls.Add(this.QLS_container);
             this.sideBar.Controls.Add(this.QLDH_container);
@@ -171,7 +167,6 @@
             this.sideBar.Controls.Add(this.pnQLKM);
             this.sideBar.Controls.Add(this.pnQLDchiKH);
             this.sideBar.Controls.Add(this.pnQLNV);
-            this.sideBar.Controls.Add(this.pnTTTK);
             this.sideBar.Controls.Add(this.pnDangXuat);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -549,7 +544,7 @@
             // pnDangXuat
             // 
             this.pnDangXuat.Controls.Add(this.btnDangXuat);
-            this.pnDangXuat.Location = new System.Drawing.Point(0, 650);
+            this.pnDangXuat.Location = new System.Drawing.Point(0, 580);
             this.pnDangXuat.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.pnDangXuat.Name = "pnDangXuat";
             this.pnDangXuat.Size = new System.Drawing.Size(279, 60);
@@ -601,15 +596,26 @@
             this.panel3.Size = new System.Drawing.Size(1136, 40);
             this.panel3.TabIndex = 29;
             // 
-            // lblUserName
+            // label2
             // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(110, 8);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(99, 25);
-            this.lblUserName.TabIndex = 24;
-            this.lblUserName.Text = "username";
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(13, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 25);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Xin chào:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(888, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Chức vụ:";
             // 
             // lblRole
             // 
@@ -623,56 +629,15 @@
             this.lblRole.Text = "role";
             this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lblUserName
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(888, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 25);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Chức vụ:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 25);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Xin chào:";
-            // 
-            // pnTTTK
-            // 
-            this.pnTTTK.Controls.Add(this.btnTTTK);
-            this.pnTTTK.Location = new System.Drawing.Point(0, 580);
-            this.pnTTTK.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.pnTTTK.Name = "pnTTTK";
-            this.pnTTTK.Size = new System.Drawing.Size(279, 60);
-            this.pnTTTK.TabIndex = 29;
-            // 
-            // btnTTTK
-            // 
-            this.btnTTTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.btnTTTK.FlatAppearance.BorderSize = 0;
-            this.btnTTTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTTTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTTTK.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnTTTK.IconChar = FontAwesome.Sharp.IconChar.IdCardAlt;
-            this.btnTTTK.IconColor = System.Drawing.Color.AliceBlue;
-            this.btnTTTK.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTTTK.IconSize = 45;
-            this.btnTTTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTTTK.Location = new System.Drawing.Point(0, 0);
-            this.btnTTTK.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.btnTTTK.Name = "btnTTTK";
-            this.btnTTTK.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnTTTK.Size = new System.Drawing.Size(313, 60);
-            this.btnTTTK.TabIndex = 25;
-            this.btnTTTK.Text = " Thông tin tài khoản";
-            this.btnTTTK.UseVisualStyleBackColor = false;
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(110, 8);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(99, 25);
+            this.lblUserName.TabIndex = 24;
+            this.lblUserName.Text = "username";
             // 
             // Main
             // 
@@ -707,9 +672,7 @@
             this.pnDangXuat.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.pnTTTK.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -752,7 +715,5 @@
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel pnTTTK;
-        private FontAwesome.Sharp.IconButton btnTTTK;
     }
 }

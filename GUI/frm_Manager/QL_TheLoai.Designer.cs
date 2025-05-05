@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
-            this.elipseControl1 = new GUI.ElipseControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTheLoai = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaTL = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTenTL = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtSearchKey = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnSua = new FontAwesome.Sharp.IconButton();
+            this.btnXoa = new FontAwesome.Sharp.IconButton();
+            this.btnThem = new FontAwesome.Sharp.IconButton();
+            this.elipseControl1 = new GUI.ElipseControl();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -75,11 +75,6 @@
             this.bigLabel1.TabIndex = 1;
             this.bigLabel1.Text = "QUẢN LÝ THỂ LOẠI";
             // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 50;
-            this.elipseControl1.TargetControl = null;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
@@ -90,26 +85,29 @@
             this.panel1.Size = new System.Drawing.Size(1300, 68);
             this.panel1.TabIndex = 27;
             // 
-            // dataGridView1
+            // dgvTheLoai
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvTheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 42);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 470);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvTheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTheLoai.Location = new System.Drawing.Point(25, 42);
+            this.dgvTheLoai.Name = "dgvTheLoai";
+            this.dgvTheLoai.ReadOnly = true;
+            this.dgvTheLoai.RowHeadersWidth = 62;
+            this.dgvTheLoai.RowTemplate.Height = 28;
+            this.dgvTheLoai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTheLoai.Size = new System.Drawing.Size(618, 470);
+            this.dgvTheLoai.TabIndex = 0;
+            this.dgvTheLoai.SelectionChanged += new System.EventHandler(this.dgvTheLoai_SelectionChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvTheLoai);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(597, 101);
             this.groupBox1.Name = "groupBox1";
@@ -134,21 +132,22 @@
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtMaTL);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(17, 58);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(507, 52);
             this.panel3.TabIndex = 28;
             // 
-            // textBox1
+            // txtMaTL
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(244, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 39);
-            this.textBox1.TabIndex = 25;
+            this.txtMaTL.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMaTL.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtMaTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaTL.Location = new System.Drawing.Point(244, 9);
+            this.txtMaTL.Name = "txtMaTL";
+            this.txtMaTL.Size = new System.Drawing.Size(244, 39);
+            this.txtMaTL.TabIndex = 25;
             // 
             // label2
             // 
@@ -163,21 +162,21 @@
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Controls.Add(this.txtTenTL);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Location = new System.Drawing.Point(17, 124);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(507, 52);
             this.panel4.TabIndex = 29;
             // 
-            // textBox5
+            // txtTenTL
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(244, 9);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(244, 39);
-            this.textBox5.TabIndex = 25;
+            this.txtTenTL.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTenTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTL.Location = new System.Drawing.Point(244, 9);
+            this.txtTenTL.Name = "txtTenTL";
+            this.txtTenTL.Size = new System.Drawing.Size(244, 39);
+            this.txtTenTL.TabIndex = 25;
             // 
             // label5
             // 
@@ -230,7 +229,7 @@
             // 
             this.panel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel16.Controls.Add(this.label12);
-            this.panel16.Controls.Add(this.textBox12);
+            this.panel16.Controls.Add(this.txtSearchKey);
             this.panel16.Location = new System.Drawing.Point(23, 41);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(462, 61);
@@ -246,83 +245,92 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Mã thể loại:";
             // 
-            // textBox12
+            // txtSearchKey
             // 
-            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(191, 16);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(239, 39);
-            this.textBox12.TabIndex = 35;
+            this.txtSearchKey.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSearchKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchKey.Location = new System.Drawing.Point(191, 16);
+            this.txtSearchKey.Name = "txtSearchKey";
+            this.txtSearchKey.Size = new System.Drawing.Size(239, 39);
+            this.txtSearchKey.TabIndex = 35;
+            this.txtSearchKey.TextChanged += new System.EventHandler(this.txtSearchKey_TextChanged);
             // 
             // panel15
             // 
             this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel15.Controls.Add(this.iconButton3);
-            this.panel15.Controls.Add(this.iconButton2);
-            this.panel15.Controls.Add(this.iconButton1);
+            this.panel15.Controls.Add(this.btnSua);
+            this.panel15.Controls.Add(this.btnXoa);
+            this.panel15.Controls.Add(this.btnThem);
             this.panel15.Location = new System.Drawing.Point(82, 34);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(398, 61);
             this.panel15.TabIndex = 28;
             // 
-            // iconButton3
+            // btnSua
             // 
-            this.iconButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            this.iconButton3.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(253, 6);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(79, 50);
-            this.iconButton3.TabIndex = 36;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.btnSua.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnSua.IconSize = 30;
+            this.btnSua.Location = new System.Drawing.Point(253, 6);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(79, 50);
+            this.btnSua.TabIndex = 36;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // iconButton2
+            // btnXoa
             // 
-            this.iconButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.iconButton2.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton2.IconSize = 30;
-            this.iconButton2.Location = new System.Drawing.Point(158, 6);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(79, 50);
-            this.iconButton2.TabIndex = 36;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnXoa.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnXoa.IconSize = 30;
+            this.btnXoa.Location = new System.Drawing.Point(158, 6);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(0);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(79, 50);
+            this.btnXoa.TabIndex = 36;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // iconButton1
+            // btnThem
             // 
-            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButton1.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(63, 6);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(79, 50);
-            this.iconButton1.TabIndex = 36;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnThem.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnThem.IconSize = 30;
+            this.btnThem.Location = new System.Drawing.Point(63, 6);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(0);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(79, 50);
+            this.btnThem.TabIndex = 36;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // elipseControl1
+            // 
+            this.elipseControl1.CornerRadius = 50;
+            this.elipseControl1.TargetControl = null;
             // 
             // QL_TheLoai
             // 
@@ -338,9 +346,10 @@
             this.Name = "QL_TheLoai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "QLHoaDon";
+            this.Load += new System.EventHandler(this.QL_TheLoai_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -365,24 +374,24 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
         private ElipseControl elipseControl1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTheLoai;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaTL;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTenTL;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtSearchKey;
         private System.Windows.Forms.Panel panel15;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnSua;
+        private FontAwesome.Sharp.IconButton btnXoa;
+        private FontAwesome.Sharp.IconButton btnThem;
     }
 }

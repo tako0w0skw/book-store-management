@@ -43,7 +43,7 @@ namespace GUI
         {
             if(lvwCTHD.Items.Count == 0)
             {
-                return;
+                Reset();
             }    
 
             double phiVC = txtPhiVC.Text == "" ? 0 : double.Parse(txtPhiVC.Text);
@@ -58,7 +58,9 @@ namespace GUI
                 {
                     giamGia = double.Parse(txtSoTienGiam.Text.Replace(" VNĐ", ""));
                 }    
-            }    
+            }
+            
+            txtTamTinh.Text = tamTinh.ToString() + " VNĐ";
 
             tongTien = tamTinh - giamGia + phiVC;
             lblTongTien.Text = tongTien.ToString() + " VNĐ";
@@ -176,7 +178,10 @@ namespace GUI
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if(result == DialogResult.Yes)
                 {
-                    lvwCTHD.Items.Remove(lvwCTHD.SelectedItems[0]);
+                    ListViewItem item = lvwCTHD.SelectedItems[0];
+                    tamTinh -= double.Parse(item.SubItems[4].Text);
+                    lvwCTHD.Items.Remove(item);
+                    TinhTongTien();
                     Clear();
                 }    
             }    
@@ -201,6 +206,12 @@ namespace GUI
             {
                 ListViewItem item = lvwCTHD.SelectedItems[0];
                 item.SubItems[2].Text = nmSoLuong.Value.ToString();
+
+                item.SubItems[4].Text = (int.Parse(item.SubItems[2].Text) * double.Parse(item.SubItems[3].Text)).ToString();
+
+                TinhTongTien();
+
+                MessageBox.Show("Đã cập nhật số lượng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }    
             else
             {

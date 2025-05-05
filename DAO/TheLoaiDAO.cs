@@ -36,5 +36,46 @@ namespace DAO
             conn.Close();
             return dsTheLoai;
         }
+
+        public int ThemTheLoai(TheLoaiDTO tl)
+        {
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@TenTheLoai", tl.TenTheLoai));
+            SqlParameter[] parameters = paramList.ToArray();
+            string proc = "sp_ThemTheLoai";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            conn.Close();
+            return kq;
+        }
+
+        public int CapNhatTheLoai(TheLoaiDTO tl)
+        {
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@MaTheLoai", tl.MaTheLoai));
+            paramList.Add(new SqlParameter("@TenTheLoai", tl.TenTheLoai));
+            SqlParameter[] parameters = paramList.ToArray();
+            string proc = "sp_CapNhatTheLoai";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            conn.Close();
+            return kq;
+        }
+
+        public int XoaTheLoai(int maTL)
+        {
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@MaTheLoai", maTL));
+            SqlParameter[] parameters = paramList.ToArray();
+            string proc = "sp_XoaTheLoai";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            DataProvider.ThucThi("sp_ReseedIdentityTheLoai", conn);
+            conn.Close();
+            return kq;
+        }
     }
 }

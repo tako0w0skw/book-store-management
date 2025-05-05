@@ -10,113 +10,92 @@ namespace DAO
 {
     public class KhachHangDAO
     {
-        private static string strKetNoi = "Data Source=.;Initial Catalog=QuanLyPMBanSach;Integrated Security=True";
-
-        public List<KhachHangDTO> LayDanhSachKhachHang(int maKH = -1, string tenKH = null)
+        public List<KhachHangDTO> LayDanhSachKhachHang(int maKH = -1)
         {
-            List<KhachHangDTO> ds = new List<KhachHangDTO>();
-
-            using (SqlConnection conn = new SqlConnection(strKetNoi))
+            SqlParameter[] parameters = new SqlParameter[] { };
+            if (maKH != -1)
             {
-                string query = "SELECT * FROM KHACHHANG";
-                if (maKH != -1)
-                {
-                    query += " WHERE MaKH = @MaKH";
-                }
-                else if (!string.IsNullOrEmpty(tenKH))
-                {
-                    query += " WHERE HoTen LIKE @TenKH";
-                }
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                if (maKH != -1)
-                    cmd.Parameters.AddWithValue("@MaKH", maKH);
-                else if (!string.IsNullOrEmpty(tenKH))
-                    cmd.Parameters.AddWithValue("@TenKH", "%" + tenKH + "%");
-
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        KhachHangDTO kh = new KhachHangDTO(
-                            maKH: Convert.ToInt32(reader["MaKH"]),
-                            hoTen: reader["HoTen"].ToString(),
-                            sdt: reader["SDT"].ToString(),
-                            email: reader["Email"].ToString(),
-                            username: reader["Username"].ToString(),
-                            password: reader["Password_KH"].ToString(),
-                            gioiTinh: reader["GioiTinh"].ToString(),
-                            trangThai: reader["TrangThai"].ToString()
-                        );
-                        ds.Add(kh);
-                    }
-                }
+                parameters = new SqlParameter[] { new SqlParameter("@MaKH", maKH) };
             }
-            return ds;
+
+            string proc = "sp_LayDanhSachKhachHang";
+            List<KhachHangDTO> dsKhachHang = new List<KhachHangDTO>();
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            SqlDataReader dr = DataProvider.ExcuteProcedure(proc, conn, parameters);
+            while(dr.Read())
+            {
+                KhachHangDTO khachHang = new KhachHangDTO();
+                khachHang.MaKH = int.Parse(dr["MaKH"].ToString());
+                khachHang.HoTen = dr["HoTen"].ToString();
+                khachHang.SDT = dr["SDT"].ToString();
+                khachHang.Email = dr["Email"].ToString();
+                khachHang.Username = dr["Username"].ToString();
+                khachHang.Password_KH = dr["Password_KH"].ToString();
+                khachHang.GioiTinh = dr["GioiTinh"].ToString();
+                khachHang.TrangThai = dr["TrangThai"].ToString();
+                dsKhachHang.Add(khachHang);
+            }
+            dr.Close();
+            conn.Close();
+            return dsKhachHang;
         }
 
         public int ThemKhachHang(KhachHangDTO kh)
         {
-            using (SqlConnection conn = new SqlConnection(strKetNoi))
+            SqlParameter[] parameters = new SqlParameter[]
             {
-                string query = @"INSERT INTO KHACHHANG(HoTen, SDT, Email, Username, Password_KH, GioiTinh, TrangThai) 
-                                VALUES (@HoTen, @SDT, @Email, @Username, @Password_KH, @GioiTinh, @TrangThai)";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                new SqlParameter("@HoTen", kh.HoTen),
+                new SqlParameter("@SDT", kh.SDT),
+                new SqlParameter("@Email", kh.Email),
+                new SqlParameter("@Username", kh.Username),
+                new SqlParameter("@Password_KH", kh.Password_KH),
+                new SqlParameter("@GioiTinh", kh.GioiTinh),
+                new SqlParameter("@TrangThai", kh.TrangThai)
+            };
 
-                cmd.Parameters.AddWithValue("@HoTen", kh.HoTen);
-                cmd.Parameters.AddWithValue("@SDT", kh.SDT);
-                cmd.Parameters.AddWithValue("@Email", kh.Email);
-                cmd.Parameters.AddWithValue("@Username", kh.Username);
-                cmd.Parameters.AddWithValue("@Password_KH", kh.Password_KH);
-                cmd.Parameters.AddWithValue("@GioiTinh", kh.GioiTinh);
-                cmd.Parameters.AddWithValue("@TrangThai", kh.TrangThai);
-
-                conn.Open();
-                return cmd.ExecuteNonQuery();
-            }
+            string proc = "sp_ThemKhachHang";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            conn.Close();
+            return kq;
         }
 
         public int XoaKhachHang(int maKH)
         {
-            using (SqlConnection conn = new SqlConnection(strKetNoi))
+            SqlParameter[] parameters = new SqlParameter[]
             {
-                string query = "DELETE FROM KHACHHANG WHERE MaKH = @MaKH";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@MaKH", maKH);
-                conn.Open();
-                return cmd.ExecuteNonQuery();
-            }
+                new SqlParameter("@MaKH", maKH)
+            };
+            string proc = "sp_XoaKhachHang";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            DataProvider.ThucThi("sp_ReseedIdentityKhachHang", conn);
+            conn.Close();
+            return kq;
         }
 
         public int CapNhatKhachHang(KhachHangDTO kh)
         {
-            using (SqlConnection conn = new SqlConnection(strKetNoi))
+            SqlParameter[] parameters = new SqlParameter[]
             {
-                string query = @"UPDATE KHACHHANG SET 
-                                HoTen = @HoTen, 
-                                SDT = @SDT, 
-                                Email = @Email, 
-                                Username = @Username, 
-                                Password_KH = @Password_KH, 
-                                GioiTinh = @GioiTinh, 
-                                TrangThai = @TrangThai
-                                WHERE MaKH = @MaKH";
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("@MaKH", kh.MaKH);
-                cmd.Parameters.AddWithValue("@HoTen", kh.HoTen);
-                cmd.Parameters.AddWithValue("@SDT", kh.SDT);
-                cmd.Parameters.AddWithValue("@Email", kh.Email);
-                cmd.Parameters.AddWithValue("@Username", kh.Username);
-                cmd.Parameters.AddWithValue("@Password_KH", kh.Password_KH);
-                cmd.Parameters.AddWithValue("@GioiTinh", kh.GioiTinh);
-                cmd.Parameters.AddWithValue("@TrangThai", kh.TrangThai);
-
-                conn.Open();
-                return cmd.ExecuteNonQuery();
-            }
+                new SqlParameter("@MaKH", kh.MaKH),
+                new SqlParameter("@HoTen", kh.HoTen),
+                new SqlParameter("@SDT", kh.SDT),
+                new SqlParameter("@Email", kh.Email),
+                new SqlParameter("@Username", kh.Username),
+                new SqlParameter("@Password_KH", kh.Password_KH),
+                new SqlParameter("@GioiTinh", kh.GioiTinh),
+                new SqlParameter("@TrangThai", kh.TrangThai)
+            };
+            string proc = "sp_CapNhatKhachHang";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            conn.Close();
+            return kq;
         }
     }
 }

@@ -29,32 +29,31 @@
         private void InitializeComponent()
         {
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
-            this.elipseControl1 = new GUI.ElipseControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDchiKH = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaDiaChi = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtMaDiaChiTK = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDchiKH)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -79,11 +78,6 @@
             this.bigLabel1.TabIndex = 1;
             this.bigLabel1.Text = "QUẢN LÝ ĐỊA CHỈ KHÁCH HÀNG";
             // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 50;
-            this.elipseControl1.TargetControl = null;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
@@ -94,26 +88,30 @@
             this.panel1.Size = new System.Drawing.Size(1300, 68);
             this.panel1.TabIndex = 27;
             // 
-            // dataGridView1
+            // dgvDchiKH
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvDchiKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 606);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvDchiKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDchiKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDchiKH.Location = new System.Drawing.Point(25, 44);
+            this.dgvDchiKH.MultiSelect = false;
+            this.dgvDchiKH.Name = "dgvDchiKH";
+            this.dgvDchiKH.ReadOnly = true;
+            this.dgvDchiKH.RowHeadersWidth = 62;
+            this.dgvDchiKH.RowTemplate.Height = 28;
+            this.dgvDchiKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDchiKH.Size = new System.Drawing.Size(618, 606);
+            this.dgvDchiKH.TabIndex = 0;
+            this.dgvDchiKH.SelectionChanged += new System.EventHandler(this.dgvDchiKH_SelectionChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvDchiKH);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(601, 33);
             this.groupBox1.Name = "groupBox1";
@@ -132,14 +130,16 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Mã địa chỉ:";
             // 
-            // textBox1
+            // txtMaDiaChi
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(244, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 39);
-            this.textBox1.TabIndex = 25;
+            this.txtMaDiaChi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMaDiaChi.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtMaDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaDiaChi.Location = new System.Drawing.Point(244, 9);
+            this.txtMaDiaChi.Name = "txtMaDiaChi";
+            this.txtMaDiaChi.ReadOnly = true;
+            this.txtMaDiaChi.Size = new System.Drawing.Size(244, 39);
+            this.txtMaDiaChi.TabIndex = 25;
             // 
             // groupBox2
             // 
@@ -158,7 +158,7 @@
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtMaDiaChi);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(16, 51);
             this.panel3.Name = "panel3";
@@ -168,21 +168,21 @@
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Controls.Add(this.txtMaKH);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Location = new System.Drawing.Point(16, 117);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(507, 52);
             this.panel4.TabIndex = 1;
             // 
-            // textBox5
+            // txtMaKH
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(244, 9);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(244, 39);
-            this.textBox5.TabIndex = 25;
+            this.txtMaKH.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKH.Location = new System.Drawing.Point(244, 9);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(244, 39);
+            this.txtMaKH.TabIndex = 25;
             // 
             // label5
             // 
@@ -197,22 +197,22 @@
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.txtDiaChi);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Location = new System.Drawing.Point(16, 183);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(507, 169);
             this.panel5.TabIndex = 1;
             // 
-            // textBox2
+            // txtDiaChi
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(244, 9);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 149);
-            this.textBox2.TabIndex = 25;
+            this.txtDiaChi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(244, 9);
+            this.txtDiaChi.Multiline = true;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(244, 149);
+            this.txtDiaChi.TabIndex = 25;
             // 
             // label6
             // 
@@ -275,19 +275,20 @@
             // panel16
             // 
             this.panel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel16.Controls.Add(this.textBox12);
+            this.panel16.Controls.Add(this.txtMaDiaChiTK);
             this.panel16.Location = new System.Drawing.Point(23, 41);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(462, 61);
             this.panel16.TabIndex = 28;
             // 
-            // textBox12
+            // txtMaDiaChiTK
             // 
-            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox12.Location = new System.Drawing.Point(228, 17);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(202, 37);
-            this.textBox12.TabIndex = 35;
+            this.txtMaDiaChiTK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMaDiaChiTK.Location = new System.Drawing.Point(228, 17);
+            this.txtMaDiaChiTK.Name = "txtMaDiaChiTK";
+            this.txtMaDiaChiTK.Size = new System.Drawing.Size(202, 37);
+            this.txtMaDiaChiTK.TabIndex = 35;
+            this.txtMaDiaChiTK.TextChanged += new System.EventHandler(this.txtMaDiaChiTK_TextChanged);
             // 
             // panel15
             // 
@@ -319,6 +320,7 @@
             this.iconButton3.Size = new System.Drawing.Size(79, 50);
             this.iconButton3.TabIndex = 36;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // iconButton2
             // 
@@ -338,6 +340,7 @@
             this.iconButton2.Size = new System.Drawing.Size(79, 50);
             this.iconButton2.TabIndex = 36;
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // iconButton1
             // 
@@ -357,6 +360,7 @@
             this.iconButton1.Size = new System.Drawing.Size(79, 50);
             this.iconButton1.TabIndex = 36;
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // QL_DchiKH
             // 
@@ -373,7 +377,7 @@
             this.Text = "QLHoaDon";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDchiKH)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -399,26 +403,25 @@
         #endregion
 
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
-        private ElipseControl elipseControl1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDchiKH;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaDiaChi;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtMaDiaChiTK;
         private System.Windows.Forms.Panel panel15;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;

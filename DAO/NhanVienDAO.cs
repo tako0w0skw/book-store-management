@@ -88,5 +88,69 @@ namespace DAO
 
             return kq > 0;
         }
+
+        public int ThemNhanVien(NhanVienDTO nv)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@HoTen", nv.HoTen),
+                new SqlParameter("@GioiTinh", nv.GioiTinh),
+                new SqlParameter("@NgaySinh", nv.NgaySinh == DateTime.MinValue ? (object)DBNull.Value : nv.NgaySinh),
+                new SqlParameter("@Email", nv.Email),
+                new SqlParameter("@SDT", nv.SDT),
+                new SqlParameter("@DiaChi", nv.DiaChi),
+                new SqlParameter("@ChucVu", nv.ChucVu),
+                new SqlParameter("@NgayVaoLam", nv.NgayVaoLam == DateTime.MinValue ? (object)DBNull.Value : nv.NgayVaoLam),
+                new SqlParameter("@Username", nv.Username),
+                new SqlParameter("@Password_NV", nv.Password_NV),
+                new SqlParameter("@TrangThai", nv.TrangThai)
+            };
+            string proc = "sp_ThemNhanVien";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            conn.Close();
+            return kq;
+        }
+
+        public int XoaNhanVien(int maNV)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaNV", maNV)
+            };
+            string proc = "sp_XoaNhanVien";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            DataProvider.ThucThi("sp_ReseedIdentityNhanVien", conn);
+            conn.Close();
+            return kq;
+        }
+
+        public int CapNhatNhanVien(NhanVienDTO nv)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaNV", nv.MaNV),
+                new SqlParameter("@HoTen", nv.HoTen),
+                new SqlParameter("@GioiTinh", nv.GioiTinh),
+                new SqlParameter("@NgaySinh", nv.NgaySinh == DateTime.MinValue ? (object)DBNull.Value : nv.NgaySinh),
+                new SqlParameter("@Email", nv.Email),
+                new SqlParameter("@SDT", nv.SDT),
+                new SqlParameter("@DiaChi", nv.DiaChi),
+                new SqlParameter("@ChucVu", nv.ChucVu),
+                new SqlParameter("@NgayVaoLam", nv.NgayVaoLam == DateTime.MinValue ? (object)DBNull.Value : nv.NgayVaoLam),
+                new SqlParameter("@Username", nv.Username),
+                new SqlParameter("@Password_NV", nv.Password_NV),
+                new SqlParameter("@TrangThai", nv.TrangThai)
+            };
+            string proc = "sp_CapNhatNhanVien";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            conn.Close();
+            return kq;
+        }
     }
 }

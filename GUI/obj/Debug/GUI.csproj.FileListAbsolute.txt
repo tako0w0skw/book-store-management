@@ -114,7 +114,6 @@ D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.Properties.Reso
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.QLHoaDon.resources
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.QL_CTHD.resources
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.QL_KhachHang.resources
-D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.QL_KhuyenMai.resources
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.QL_TacGia.resources
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.QL_TGSach.resources
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.QL_TheLoai.resources
@@ -125,3 +124,4 @@ D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.exe
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.pdb
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.frm_Manager.frm_CTHD.resources
+D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.frm_Manager.QLKM.resources

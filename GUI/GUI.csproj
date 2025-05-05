@@ -166,6 +166,12 @@
     <Compile Include="frm_Manager\frm_CTHD.Designer.cs">
       <DependentUpon>frm_CTHD.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Manager\QLKM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Manager\QLKM.Designer.cs">
+      <DependentUpon>QLKM.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Manager\QL_DchiKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,12 +216,6 @@
     <Compile Include="frm_Manager\QL_KhachHang.Designer.cs">
       <DependentUpon>QL_KhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Manager\QL_KhuyenMai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Manager\QL_KhuyenMai.Designer.cs">
-      <DependentUpon>QL_KhuyenMai.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_Manager\QL_TGSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +252,9 @@
     <EmbeddedResource Include="frm_Manager\frm_CTHD.resx">
       <DependentUpon>frm_CTHD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Manager\QLKM.resx">
+      <DependentUpon>QLKM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Manager\QL_DchiKH.resx">
       <DependentUpon>QL_DchiKH.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,9 +285,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Manager\QL_KhachHang.resx">
       <DependentUpon>QL_KhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Manager\QL_KhuyenMai.resx">
-      <DependentUpon>QL_KhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Manager\QL_TacGia.resx">
       <DependentUpon>QL_TacGia.cs</DependentUpon>

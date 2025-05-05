@@ -33,5 +33,46 @@ namespace DAO
             conn.Close();
             return dsTacGia;
         }
+
+        public int ThemTacGia(TacGiaDTO tacGia)
+        {
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@TenTacGia", tacGia.TenTacGia));
+            SqlParameter[] parameters = paramList.ToArray();
+            string proc = "sp_ThemTacGia";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            conn.Close();
+            return kq;
+        }
+
+        public int CapNhatTacGia(TacGiaDTO tacGia)
+        {
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@MaTacGia", tacGia.MaTacGia));
+            paramList.Add(new SqlParameter("@TenTacGia", tacGia.TenTacGia));
+            SqlParameter[] parameters = paramList.ToArray();
+            string proc = "sp_CapNhatTacGia";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            conn.Close();
+            return kq;
+        }
+
+        public int XoaTacGia(int maTacGia)
+        {
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@MaTacGia", maTacGia));
+            SqlParameter[] parameters = paramList.ToArray();
+            string proc = "sp_XoaTacGia";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            conn.Open();
+            int kq = DataProvider.ExcuteProcedureNonQuery(proc, conn, parameters);
+            DataProvider.ThucThi("sp_ReseedIdentityTacGia", conn);
+            conn.Close();
+            return kq;
+        }
     }
 }

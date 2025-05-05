@@ -225,5 +225,18 @@ namespace GUI.frm_Manager
                 MessageBox.Show("Lỗi cập nhật sách: " + ex.Message);
             }
         }
+
+        private void txtSearchKey_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtSearchKey.Text, out int maSach))
+            {
+                dsSach = sachBUS.LayDanhSachSach(maSach);
+                dgvSach.DataSource = dsSach;
+            }
+            else
+            {
+                LayDanhSachSach();
+            }
+        }
     }
 }

@@ -10,10 +10,10 @@ namespace BUS
 {
     public class KhachHangBUS
     {
-        public List<KhachHangDTO> LayDanhSachKhachHang(int maKH = -1, string tenKH = null)
+        public List<KhachHangDTO> LayDanhSachKhachHang(int maKH = -1)
         {
             KhachHangDAO khachHangDAO = new KhachHangDAO();
-            return khachHangDAO.LayDanhSachKhachHang(maKH, tenKH);
+            return khachHangDAO.LayDanhSachKhachHang(maKH);
         }
 
         public int ThemKhachHang(KhachHangDTO kh)

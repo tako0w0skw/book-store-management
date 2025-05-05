@@ -73,7 +73,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtSearchKey = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
@@ -604,7 +604,7 @@
             // 
             this.panel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel16.Controls.Add(this.label12);
-            this.panel16.Controls.Add(this.textBox12);
+            this.panel16.Controls.Add(this.txtSearchKey);
             this.panel16.Location = new System.Drawing.Point(65, 38);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(526, 48);
@@ -620,14 +620,15 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Mã sách:";
             // 
-            // textBox12
+            // txtSearchKey
             // 
-            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(216, 6);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(240, 39);
-            this.textBox12.TabIndex = 35;
+            this.txtSearchKey.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSearchKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchKey.Location = new System.Drawing.Point(216, 6);
+            this.txtSearchKey.Name = "txtSearchKey";
+            this.txtSearchKey.Size = new System.Drawing.Size(240, 39);
+            this.txtSearchKey.TabIndex = 35;
+            this.txtSearchKey.TextChanged += new System.EventHandler(this.txtSearchKey_TextChanged);
             // 
             // panel15
             // 
@@ -799,7 +800,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtSearchKey;
         private System.Windows.Forms.Panel panel15;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnXoa;

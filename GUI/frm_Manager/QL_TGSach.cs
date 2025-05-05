@@ -167,5 +167,18 @@ namespace GUI
                 LayDanhSachTacGiaSach();
             }
         }
+
+        private void txtSearchKey_TextChanged(object sender, EventArgs e)
+        {
+            if(int.TryParse(txtSearchKey.Text, out int maSach))
+            {
+                dsTacGiaSach = tacGiaSachBUS.LayDanhSachTacGiaSach(maSach);
+                dgvTGS.DataSource = dsTacGiaSach;
+            }    
+            else
+            {
+                LayDanhSachTacGiaSach();
+            }    
+        }
     }
 }

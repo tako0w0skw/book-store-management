@@ -16,5 +16,23 @@ namespace BUS
             TheLoaiDAO theLoaiDAO = new TheLoaiDAO();
             return theLoaiDAO.LayDanhSachTheLoai(maTL);
         }
+
+        public int ThemTheLoai(TheLoaiDTO tl)
+        {
+            TheLoaiDAO theLoaiDAO = new TheLoaiDAO();
+            return theLoaiDAO.ThemTheLoai(tl);
+        }
+
+        public int CapNhatTheLoai(TheLoaiDTO tl)
+        {
+            TheLoaiDAO theLoaiDAO = new TheLoaiDAO();
+            return theLoaiDAO.CapNhatTheLoai(tl);
+        }
+
+        public int XoaTheLoai(int maTL)
+        {
+            TheLoaiDAO theLoaiDAO = new TheLoaiDAO();
+            return theLoaiDAO.XoaTheLoai(maTL);
+        }
     }
 }

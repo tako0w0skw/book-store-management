@@ -15,5 +15,23 @@ namespace BUS
             TacGiaDAO tacGiaDAO = new TacGiaDAO();
             return tacGiaDAO.LayDanhSachTacGia(maTG);
         }
+
+        public int ThemTacGia(TacGiaDTO tacGia)
+        {
+            TacGiaDAO tacGiaDAO = new TacGiaDAO();
+            return tacGiaDAO.ThemTacGia(tacGia);
+        }
+
+        public int CapNhatTacGia(TacGiaDTO tacGia)
+        {
+            TacGiaDAO tacGiaDAO = new TacGiaDAO();
+            return tacGiaDAO.CapNhatTacGia(tacGia);
+        }
+
+        public int XoaTacGia(int maTacGia)
+        {
+            TacGiaDAO tacGiaDAO = new TacGiaDAO();
+            return tacGiaDAO.XoaTacGia(maTacGia);
+        }
     }
 }

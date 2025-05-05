@@ -181,5 +181,18 @@ namespace GUI
                 cbTenTheLoai.SelectedIndex = -1;
             }
         }
+
+        private void txtSearchKey_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtSearchKey.Text, out int maSach))
+            {
+                dsTheLoaiSach = theLoaiSachBUS.LayDanhSachTheLoaiSach(maSach);
+                dgvTLS.DataSource = dsTheLoaiSach;
+            }
+            else
+            {
+                LayDanhSachTheLoaiSach();
+            }
+        }
     }
 }

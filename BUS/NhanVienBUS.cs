@@ -22,5 +22,23 @@ namespace BUS
             NhanVienDAO nhanVienDAO = new NhanVienDAO();
             return nhanVienDAO.KiemTraDangNhap(username, password);
         }
+
+        public int ThemNhanVien(NhanVienDTO nhanVien)
+        {
+            NhanVienDAO nhanVienDAO = new NhanVienDAO();
+            return nhanVienDAO.ThemNhanVien(nhanVien);
+        }
+
+        public int XoaNhanVien(int maNV)
+        {
+            NhanVienDAO nhanVienDAO = new NhanVienDAO();
+            return nhanVienDAO.XoaNhanVien(maNV);
+        }
+
+        public int CapNhatNhanVien(NhanVienDTO nhanVien)
+        {
+            NhanVienDAO nhanVienDAO = new NhanVienDAO();
+            return nhanVienDAO.CapNhatNhanVien(nhanVien);
+        }
     }
 }
