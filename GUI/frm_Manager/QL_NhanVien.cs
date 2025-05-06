@@ -53,6 +53,7 @@ namespace GUI.frm_Manager
                     txtHoTen.Text = nhanVien.HoTen;
                     txtSDT.Text = nhanVien.SDT;
                     txtEmail.Text = nhanVien.Email;
+                    txtDiaChi.Text = nhanVien.DiaChi;
                     txtUsername.Text = nhanVien.Username;
                     txtPassword.Text = nhanVien.Password_NV;
                     cbChucVu.Text = nhanVien.ChucVu;
@@ -64,6 +65,7 @@ namespace GUI.frm_Manager
                     {
                         radNu.Checked = true;
                     }
+                    chkTrangThai.Checked = nhanVien.TrangThai == "Hoạt động" ? true : false;
                 }
             }
         }
