@@ -44,6 +44,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
+            this.btnXuatHD = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
             this.panel2.SuspendLayout();
@@ -238,11 +239,34 @@
             this.lblTongTien.TabIndex = 1;
             this.lblTongTien.Text = "totalAmount";
             // 
+            // btnXuatHD
+            // 
+            this.btnXuatHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.btnXuatHD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnXuatHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatHD.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnXuatHD.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            this.btnXuatHD.IconColor = System.Drawing.Color.AliceBlue;
+            this.btnXuatHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXuatHD.IconSize = 30;
+            this.btnXuatHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatHD.Location = new System.Drawing.Point(604, 565);
+            this.btnXuatHD.Name = "btnXuatHD";
+            this.btnXuatHD.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnXuatHD.Size = new System.Drawing.Size(184, 46);
+            this.btnXuatHD.TabIndex = 5;
+            this.btnXuatHD.Text = "      Xuất hóa đơn";
+            this.btnXuatHD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatHD.UseVisualStyleBackColor = false;
+            this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
+            // 
             // frm_CTHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(800, 623);
+            this.Controls.Add(this.btnXuatHD);
             this.Controls.Add(this.lblTongTien);
             this.Controls.Add(this.dgvCTHD);
             this.Controls.Add(this.bigLabel1);
@@ -282,5 +306,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblTongTien;
+        private FontAwesome.Sharp.IconButton btnXuatHD;
     }
 }

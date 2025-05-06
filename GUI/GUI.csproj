@@ -208,6 +208,12 @@
     <Compile Include="frm_Manager\QL_Sach.Designer.cs">
       <DependentUpon>QL_Sach.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Manager\XemCTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Manager\XemCTHD.Designer.cs">
+      <DependentUpon>XemCTHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,11 @@
     <Compile Include="frm_Manager\QL_TacGia.Designer.cs">
       <DependentUpon>QL_TacGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyPMBanSach.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPMBanSach.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RoundPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -284,6 +295,9 @@
       <DependentUpon>QL_Sach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Manager\Report_CTHD.rdlc" />
+    <EmbeddedResource Include="frm_Manager\XemCTHD.resx">
+      <DependentUpon>XemCTHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,6 +357,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyPMBanSach.xsc">
+      <DependentUpon>QuanLyPMBanSach.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPMBanSach.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPMBanSach.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPMBanSach.xss">
+      <DependentUpon>QuanLyPMBanSach.xsd</DependentUpon>
+    </None>
     <None Include="Resources\flower-for-u-pookie-2.jpg" />
   </ItemGroup>
   <ItemGroup>

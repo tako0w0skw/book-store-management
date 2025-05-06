@@ -22,5 +22,16 @@ namespace GUI.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=QuanLyPMBanSach;Integrated Security=True;TrustServe" +
+            "rCertificate=True")]
+        public string QuanLyPMBanSachConnectionString {
+            get {
+                return ((string)(this["QuanLyPMBanSachConnectionString"]));
+            }
+        }
     }
 }

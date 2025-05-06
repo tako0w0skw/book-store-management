@@ -185,3 +185,4 @@ D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\bin\Debug\zh-CHS\Microsoft.Re
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\LT_Windows\BaoCaoDoAn\book-store-management\GUI\obj\Debug\GUI.frm_Manager.XemCTHD.resources

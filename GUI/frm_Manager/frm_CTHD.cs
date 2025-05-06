@@ -83,5 +83,14 @@ namespace GUI.frm_Manager
         {
             dsKhachHang = khachHangBUS.LayDanhSachKhachHang(maKH);
         }
+
+        private void btnXuatHD_Click(object sender, EventArgs e)
+        {
+            dsCTHD = cthdBUS.LayDanhSachChiTietHoaDon(maHD);
+            LayNhanVien(int.Parse(dsHoaDon[0].MaNV.ToString()));
+            LayKhachHang(int.Parse(dsHoaDon[0].MaKH.ToString()));
+            XemCTHD xemCTHD = new XemCTHD(dsCTHD, dsNhanVien[0].HoTen, dsKhachHang[0].HoTen);
+            xemCTHD.ShowDialog();
+        }
     }
 }
